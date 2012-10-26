@@ -1,38 +1,68 @@
-function lineal()
+function armar_tabla()
 {
   var cantidad=document.getElementById("cantidad").value;
   var tabla_valores=document.getElementById("tabla_valores");
-  alert("Estoy en el JS "+ cantidad);
-  
-  //Dibujar la tabla
-  tabla_valores.innerHTML="  <table> "+
-             "<thead> "+
-               " <tr> "+
-                   " <th>Product</th> "+
-                   " <th>Inflation Rate</th> "+
-                   " <th>Note</th> "+
-               " </tr> "+
-           " </thead> "+
- /*
-            <tbody>
-                <tr>
-                    <td>Coke® Inflation Index</td>
-                    <td>7.23%</td>
-                    <td>Yeah, its about $2/bottle now</td>
-                </tr>
-                <tr>
-                    <td>Gas Inflation Index</td>
-                    <td>6.94%</td>
-                    <td>Such a pain at the pump!</td>
-                 </tr>
+  var i;
 
-            </tbody>
-            */
+  //Dibujar la tabla
+  var cadena_virtual=
+  "<table class='table table-striped' > "+
+
+    /* Cabecera */
+    "<thead> "+
+      "<tr> "+
+        "<th> n </th> "+
+        "<th>Xn </th> "+
+        "<th>Yn </th> "+
+        "<th>Xn * Yn </th> "+
+        "<th>(Xn)^2 </th> "+
+        "<th>Y'n = B x + A</th> "+
+        "<th>Yn - Y'n </th> "+
+        "<th>E=(Yn-Y'n)^2 </th> "+
+      "</tr> "+
+    "</thead> "+
+
+    /* Cuerpo */
+    "<tbody> ";
+      
+
+      for(i=0;i<cantidad;i++)
+      {
+        cadena_virtual = cadena_virtual + 
+        "<tr> "+
+        "<td>" + i+"</td> "+
+        "<td><input type='text' size='2' maxlength='2' > </td> "+
+        "<td><input type='text' size='2' maxlength='2' > </td> "+
+        "<td><input type='output'> </td> "+
+        "<td><input type='output'>  </d> "+
+        "<td><input type='output'> </td> "+
+        "<td><input type='output'>  </td> "+
+        "<td><input type='output'> </td> "+
+        "</tr> ";
+      }
+
+  cadena_virtual = cadena_virtual + 
+      
+    "</tbody> "+
  
-           " <tfoot> "+
-               " <tr><td >Copyright &#9400 2011 Infosoft International Inc</td>"+
-             "   </tr>"+
-          "  </tfoot>"+
-        "</table>";
+    /* Pie */
+    "<tfoot> "+
+      "<tr> " +
+        "<td>Total</td> "+
+        "<td>Xn </td> "+
+        "<td>Yn </td> "+
+        "<td>Xn * Yn </td> "+
+        "<td>(Xn)^2 </td> "+
+        "<td>Y'n = B x + A</td> "+
+        "<td>Yn - Y'n </td> "+
+        "<td>E=(Yn-Y'n)^2 </td> "+
+      "</tr> "+
+    "</tfoot>"+
+  "</table>";
+
+  //Dibujar la tabla
+  tabla_valores.innerHTML=cadena_virtual;
+
+  //alert("Estoy en el JS "+ cadena_virtual);
 
 }
