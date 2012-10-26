@@ -1,0 +1,5 @@
+# Ignorar otros archivos innecesarios
+*.swp
+*.bak
+*~
+*.log

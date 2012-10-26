@@ -1,0 +1,63 @@
+body
+{
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.central_div
+{
+  width: 98%;
+  background-color: white;
+  color: black;
+  /*opacity: .9;*/ 
+  padding: 10px;
+  border-radius: 5px; 
+  -moz-border-radius: 5px; 
+  -webkit-border-radius: 5px; 
+  border: 1px solid #32DEDE;
+}
+
+.cantidad
+{
+  width: 40px; 
+  text-align: right;
+}
+
+.linearGreen
+{
+  background-image: linear-gradient(bottom, rgb(33,207,33) 26%, rgb(0,170,0) 63%, rgb(0,65,0) 95%);
+  background-image: -o-linear-gradient(bottom, rgb(33,207,33) 26%, rgb(0,170,0) 63%, rgb(0,65,0) 95%);
+  background-image: -moz-linear-gradient(bottom, rgb(33,207,33) 26%, rgb(0,170,0) 63%, rgb(0,65,0) 95%);
+  background-image: -webkit-linear-gradient(bottom, rgb(33,207,33) 26%, rgb(0,170,0) 63%, rgb(0,65,0) 95%);
+  background-image: -ms-linear-gradient(bottom, rgb(33,207,33) 26%, rgb(0,170,0) 63%, rgb(0,65,0) 95%);
+  background-image: -webkit-gradient( linear,
+	                                    left bottom,
+	                                    left top,
+	                                    color-stop(0.26, rgb(33,207,33)),
+	                                    color-stop(0.63, rgb(0,170,0)),
+	                                    color-stop(0.95, rgb(0,65,0)));
+}
+
+.linearBlue
+{ 
+  /* fallback */ 
+  background-color: #1a82f7; 
+  background-image: url(images/linear_bg_1.png); 
+  background-repeat: repeat-y; 
+  
+  /* Safari 4-5, Chrome 1-9 */ 
+  background: -webkit-gradient(linear, left top, right top, from(#1a82f7), to(#2F2727)); 
+  
+  /* Safari 5.1, Chrome 10+ */ 
+  background: -webkit-linear-gradient(left, #2F2727, #1a82f7); 
+  
+  /* Firefox 3.6+ */ 
+  background: -moz-linear-gradient(left, #2F2727, #1a82f7); 
+  
+  /* IE 10 */ 
+  background: -ms-linear-gradient(left, #2F2727, #1a82f7); 
+  
+  /* Opera 11.10+ */ 
+  background: -o-linear-gradient(left, #2F2727, #1a82f7); 
+}
+
